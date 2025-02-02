@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: shop-api
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/shop_api_db
+    username: postgres
+    password: Vincere7
+    hikari:
+      maximum-pool-size: 30
+
+  sql:
+    init:
+      mode: always
+      schema-locations: optional:schema.sql
+
+  kafka:
+    bootstrap-servers: "localhost:9092"
