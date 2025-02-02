@@ -1,10 +1,7 @@
 package com.lauro.shopapi.domain.transfer;
 
 import com.lauro.shopapi.infrastructure.in.transfer.TransferDto;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -27,6 +24,8 @@ public class Transfer {
     private String dni;
     private BigDecimal amount;
     private String description;
+
+    @Enumerated(EnumType.STRING)
     private Status status;
     private String addressee;
     private LocalDateTime createdAt;
