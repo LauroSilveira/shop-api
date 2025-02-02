@@ -20,7 +20,7 @@ public class TransferTopicLister {
     public void process(final TransferDto dto, final Acknowledgment acknowledgment) {
         log.info("Processing transfer from user: {}", dto.getUsername());
         postTransferUseCase.doTransfer(Transfer.toEntity(dto));
-        // Mark the dto as read
+        // Mark the message  as read
         acknowledgment.acknowledge();
     }
 }

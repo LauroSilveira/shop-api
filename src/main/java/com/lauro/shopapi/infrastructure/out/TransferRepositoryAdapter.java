@@ -19,10 +19,6 @@ public class TransferRepositoryAdapter implements TransferRepositoryPort {
     @Override
     public void doTransfer(final Transfer transfer) {
         log.info("Saving transfer of user: {}", transfer.getUsername());
-        try {
-            repository.save(transfer);
-        } catch (Exception e) {
-            log.error("Error saving transfer of user: {}", transfer.getUsername(), e);
-        }
+        repository.save(transfer);
     }
 }

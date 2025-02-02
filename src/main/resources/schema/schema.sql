@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS transfer
 (
     id          SERIAL       NOT NULL,
     username    VARCHAR(255) NOT NULL,
-    dni         VARCHAR(255) UNIQUE NOT NULL,
+    dni         VARCHAR(255) NOT NULL,
     amount      NUMERIC      NOT NULL,
     description VARCHAR(255),
     status      VARCHAR(80),
